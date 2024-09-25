@@ -1,0 +1,9 @@
+.wrapper {
+  padding: 5vw;
+  display: flex;
+  gap: 3vw;
+}
+.attending {
+  display: flex;
+  flex-direction: column;
+}
