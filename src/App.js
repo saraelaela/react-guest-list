@@ -1,28 +1,21 @@
 import { SyntheticEvent, useState } from 'react';
+import ExampleUserList from './ExampleUserList';
+import ExampleUserListTest from './ExampleUserListTest';
 import UserCard from './UserCard';
 
-function triggerCustomEvent(eventName, data) {
-  const event = new SyntheticEvent(eventName, {
-    bubbles: true,
-    cancelable: true,
-  });
-  event.data = data;
-  window.dispatchEvent(event);
-}
-
-/* function SaveName() {
-  const [toggleText, setToggleText] = useState(false); */
-
-/* //   return (
-//     <div>
-//       <button onClick={() => setToggleText(true)}>
-//         {toggleText ? 'Clicked!' : 'Click me!'}
-//       </button>
-//     </div>
-//   );
-// } */
+const initialList = [
+  {
+    id: 'a',
+    name: 'Robin',
+  },
+  {
+    id: 'b',
+    name: 'Dennis',
+  },
+];
 
 export default function App() {
+  const [users, setUsers] = useState(initialList);
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   //
@@ -51,6 +44,8 @@ export default function App() {
         </label>
       </form>
       <UserCard firstName={firstName} lastName={lastName} />
+      {/* <ExampleUserList firstName={firstName} lastName={lastName} /> */}
+      <ExampleUserListTest firstName={firstName} lastName={lastName} />
     </>
   );
 }
