@@ -44,8 +44,10 @@ export default function App() {
         </label>
       </form>
       <UserCard firstName={firstName} lastName={lastName} />
+      <hr />
       {/* <ExampleUserList firstName={firstName} lastName={lastName} /> */}
       <ExampleUserListTest firstName={firstName} lastName={lastName} />
+      <hr />
     </>
   );
 }
